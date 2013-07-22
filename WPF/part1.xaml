@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApplication33.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="MainWindow" Height="350" Width="525">
+  <Grid>
+    <Grid.Resources>
+
+
+      <TextBlock x:Key="Block1" x:Shared="False" xml:space="preserve" />
+
+      <Style x:Key="Style1" TargetType="TextBlock">
+        <Setter Property="Tag" Value="Abc" />
+        <EventSetter Event="Validation.Error" />
+      </Style>
+
+      <Style x:Key="Style2">
+        <Setter Property="FrameworkElement.Tag" Value="Abc" />
+      </Style>
+
+      <Style x:Key="Style3" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+
+        <Setter Property="Text" Value="{Binding Mode=TwoWay}" />
+        <Setter Property="Tag" Value="Some text" />
+      </Style>
+
+      <Style x:Key="Style4" BasedOn="{StaticResource Style3}">
+        <Setter Property="TextBlock.VerticalAlignment" Value="Stretch" />
+
+        <Setter Property="FrameworkElement.Visibility" Value="Collapsed" />
+      </Style>
+      <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Background">
+          <Setter.Value>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+              <GradientStop Offset="0" Color="Red" />
+              <GradientStop Offset="1" Color="Black" />
+            </LinearGradientBrush>
+          </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="10" />
+      </Style>
+    </Grid.Resources>
+
+    <TextBlock Tag="BrettonWoods" />
+
+    <TextBlock Style="{StaticResource Style3}" />
+
+
+    <TextBlock Style="{StaticResource Style3}" />
+
+    <TextBlock />
+
+    <StackPanel
+      Grid.Column="0"
+      Grid.Row="0" Style="{StaticResource StackPanelStyle}" />
+  </Grid>
+</Window>

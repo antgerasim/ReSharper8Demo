@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="WpfApplication33.UserControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="window">
+  <Grid>
+    <TextBlock Text="{Binding ElementName=window, Path=DataContext.PropertyOfMyViewModel}" />
+    <!--<TextBlock Text="{Binding ElementName=window, Path=DataContext.(app:MyViewModel.PropertyOfMyViewModel)}"/>-->
+  </Grid>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="WpfApplication33.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib">
+  <UserControl.Resources>
+  </UserControl.Resources>
+  <Grid>
+    <TextBlock Text="abc" />
+    <TextBlock Text="abc" Tag="{Binding StringFormat=abc}" />
+
+    <StackPanel>
+      <StackPanel.Resources>
+        <TextBlock x:Key="block" Text="Foo" />
+      </StackPanel.Resources>
+    </StackPanel>
+
+    <Border>
+      <TextBlock Grid.Column="0" Canvas.Bottom="0" Panel.ZIndex="0">
+        <TextBlock.Inlines>
+        </TextBlock.Inlines>
+      </TextBlock>
+    </Border>
+
+    <Grid>
+      <Grid.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+          <Setter Property="TextAlignment" Value="Center" />
+          <Setter Property="TextTrimming" Value="None" />
+        </Style>
+      </Grid.Resources>
+      <Grid.ColumnDefinitions>
+      </Grid.ColumnDefinitions>
+
+      <TextBlock Style="{StaticResource TextBlockStyle}"
+                 TextWrapping="NoWrap" />
+
+      <TextBlock />
+
+    </Grid>
+
+  </Grid>
+</UserControl>
