@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Tests
 {
@@ -8,6 +7,7 @@ namespace Tests
   {
     public void MyMethod()
     {
+      
     }
   }
 }

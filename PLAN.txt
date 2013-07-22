@@ -1,0 +1,55 @@
+Take this plan and pull it to your second (sixth?) monitor to follow.
+
+Order of demos:
+
+0. MAKE SURE TO REVERT TO LATEST GIT COMMIT!!!!!!
+   - Otherwise, you're showing a demo with some changes you made earlier - not good
+
+1. CODE COMPLETION ===================================================================
+   BASIC COMPLETION
+   - Open Imports.txt
+   - Make the class extend inpc, show how import is now part of ordinary completion
+   - Enter a type name 'Provi' inside the class and explain this works for types too
+   - Create List<string> names = in the class, and note how basic completion has a smart item for
+     collection initialization
+
+   DOUBLE SMART COMPLETION
+   - Navigate to Person.cs
+   - Make a new method and write string s = this.| (too many items, some inapplicable)
+   - Invoke Smart Completion (only items assignable to a string) -- what about Age?
+   - Now press it again! Explain double completion.
+   - Show that this is infinite.
+
+   DOUBLE IMPORT COMPLETION
+   - Navigate to FunTests.cs
+   - Inside the method, use Button type, press Ctrl+Space, no suggestions :)
+   - Now press Ctrl+Space again, choose Forms, explain what's happening.
+
+   PRIVATE MEMBERS IN DOUBLE COMPLETION
+   - Navigate to Manager type
+   - Create some method that takes a Person
+   - Invoke completion on parameter, then invoke it again and explain where 'id' came from.
+   - Complete and quick-fix the field.
+
+   CAST COMPLETION
+   - Change parameter type to object
+   - Explain that the typical op is if (p is Person)
+   - Show double completion on p and how that value is cast.
+
+   SENDER COMPLETION
+   - Jump to MainForm visual editor
+   - Double-click the button to create an event handler
+   - Invoke double completion on sender, explain what's happening (e.g., Visible = false)
+   
+   GENERATIVE COMPLETION
+   - Navigate to Person
+   - Show 'override'
+   - Explain ctorf, ctorp, ctorfp constructors
+   
+   FORMATTING COMPLETION
+   - Create some method, don't matter which
+   - Show DateTime.Now.ToString("|") completion
+   - Show completion for a known type like double or Guid.
+   - Show completion in string.Format("{0:|}", d) when d is a decimal. Note that you can create this from "|" via a CA.
+
+2.
