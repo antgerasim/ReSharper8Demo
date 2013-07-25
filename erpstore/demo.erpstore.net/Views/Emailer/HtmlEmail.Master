@@ -1,9 +1,0 @@
-﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-<html>
-<body marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
-<asp:ContentPlaceHolder ID="MainContent" runat="server">
-
-</asp:ContentPlaceHolder>
-</body>
-</html>
-
