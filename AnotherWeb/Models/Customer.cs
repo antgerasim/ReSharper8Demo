@@ -13,9 +13,6 @@ namespace AnotherWeb.Models
         public DateTime DateOfLastContact { get; set; }
         public int Priority { get; set; }
 
-        public Customer()
-        {
-            
-        }
+
     }
 }
