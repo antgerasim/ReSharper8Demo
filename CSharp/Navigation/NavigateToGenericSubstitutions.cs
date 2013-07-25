@@ -6,7 +6,7 @@ namespace CSharp.Navigation
   [UsedImplicitly]
   public class NavigateToGenericSubstitutions 
   {
-    void Print<T>(T t, string u)
+    void Print<T, TU>(T t, TU u)
     {
       Console.WriteLine("{0} and {1}", t, u);
     }
