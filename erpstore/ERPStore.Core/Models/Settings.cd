@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ERPStore.Model.WebSiteSettings">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <AssociationLine Name="Texts" Type="ERPStore.Model.TextSettings" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.688" Y="4.17" />
+        <Point X="1.688" Y="7.5" />
+        <Point X="4.25" Y="7.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Menus" Type="ERPStore.Model.MenuItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.688" Y="0.5" />
+        <Point X="1.688" Y="0.118" />
+        <Point X="11.625" Y="0.118" />
+        <Point X="11.625" Y="0.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAIgAAABABAAAACIAABCAAAAAgAAAASiAAAAAAIAE=</HashCode>
+      <FileName>Model\WebSiteSettings.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Texts" />
+      <Property Name="Contact" />
+      <Property Name="Payment" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Menus" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ERPStore.Model.Address">
+    <Position X="8" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAACgAAACAQIAAgAAAAQAAIQAAABAAIAAAAAAAA=</HashCode>
+      <FileName>Model\Address.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERPStore.Model.BankAccount">
+    <Position X="8" Y="5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAABQAAAgAIAAAAAAAAAGA=</HashCode>
+      <FileName>Model\BankAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERPStore.Model.TextSettings">
+    <Position X="4.25" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAEAABAAAAAAAA=</HashCode>
+      <FileName>Model\TextSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERPStore.Model.ContactSettings">
+    <Position X="4.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACACAAAAAAAEEAQQAAAQAAAABAAAAABABAAAAsA=</HashCode>
+      <FileName>Model\ContactSettings.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DefaultAddress" />
+      <Property Name="ReturnAddress" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ERPStore.Model.PaymentSettings">
+    <Position X="4.25" Y="4" Width="2.25" />
+    <AssociationLine Name="CheckDeliveryAddress" Type="ERPStore.Model.Address" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.438" />
+        <Point X="8.625" Y="4.438" />
+        <Point X="8.625" Y="3.594" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAQAgAA=</HashCode>
+      <FileName>Model\PaymentSettings.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BankAccount" />
+      <Property Name="CheckDeliveryAddress" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ERPStore.Model.MenuItem">
+    <Position X="10.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAEAAAAAAAAAAAAAAACJAAAAAAAAA=</HashCode>
+      <FileName>Model\MenuItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Links" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ERPStore.Model.LocalizedMenuLink">
+    <Position X="10.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAA=</HashCode>
+      <FileName>Model\LocalizedMenuLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

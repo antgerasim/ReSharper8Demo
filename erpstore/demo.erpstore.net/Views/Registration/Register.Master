@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#"  MasterPageFile="~/Views/Shared/Default.Master" Inherits="System.Web.Mvc.ViewMasterPage<RegistrationUser>" %>
+
+<asp:Content ID="registerHead" ContentPlaceHolderID="HeaderContent" runat="server">
+    <title>Inscription</title>
+</asp:Content>
+
+<asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
+
+<div id="grid3">
+    <div id="sgrid31">
+            <%Html.RenderPartial("~/views/Shared/RightHelp.ascx");%>
+			<%Html.RenderPartial("~/views/Shared/RightMenu2.ascx");%>
+    </div>
+    <div id="sgrid32">
+		<asp:ContentPlaceHolder ID="FormContent" runat="server" />
+		<%Html.EndForm();%>
+    </div>
+</div>
+
+
+</asp:Content>
+

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="ERPStore.Services.IAccountService">
+    <Position X="0.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAIBBgAGAAIAAABAAIAgEAABAZICAAAgIASAIA=</HashCode>
+      <FileName>Services\IAccountService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.IAddressService">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAEAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IAddressService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.ICacheService">
+    <Position X="3.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAEIAAAAAABACAAABAAAAAACAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Services\ICacheService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.ICartService">
+    <Position X="6" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AiAAEaFAAAAEAAEIYAAAABCAgAQAABBkEAAAAAJAAAA=</HashCode>
+      <FileName>Services\ICartService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.ICatalogService">
+    <Position X="8.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EEUgiQCCAAqoRAAAQjJgYwwAAQAAQCIRUgCQoQCQQUI=</HashCode>
+      <FileName>Services\ICatalogService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.IDocumentService">
+    <Position X="3.5" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAMAAAIABAAAAAAAgEABAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Services\IDocumentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.IEmailerService">
+    <Position X="0.75" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAKAAAIAAAAAAAAAAIIIAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Services\IEmailerService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.ISalesService">
+    <Position X="6" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>kAJAEAAgIgCAAJABEIQAAkgAAAJIAAAAAEAAABEAKAA=</HashCode>
+      <FileName>Services\ISalesService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.IConnectorService">
+    <Position X="3.5" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAg=</HashCode>
+      <FileName>Services\IConnectorService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.IAdminService">
+    <Position X="3.5" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAA=</HashCode>
+      <FileName>Services\IAdminService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ERPStore.Services.IScheduledTaskService">
+    <Position X="0.75" Y="9" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Services\IScheduledTaskService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
