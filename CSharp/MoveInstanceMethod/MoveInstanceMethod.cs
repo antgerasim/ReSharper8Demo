@@ -6,6 +6,14 @@ namespace CSharp.MoveInstanceMethod
   {
     private readonly Operation operation = new Operation();
 
+    public void DoWork()
+    {
+        operation.Start();
+        operation.Do();
+        operation.Verify();
+        operation.End();
+    }
+
     public Operation Operation
     {
       get { return operation; }
@@ -26,7 +34,7 @@ namespace CSharp.MoveInstanceMethod
       var result = 0;
       foreach (var worker in workers)
       {
-        worker.Operation.DoWork();
+        worker.DoWork();
         result += worker.GetResult();
       }
     }
@@ -56,12 +64,5 @@ namespace CSharp.MoveInstanceMethod
     }
 
 
-    public void DoWork()
-    {
-      Start();
-      Do();
-      Verify();
-      End();
-    }
   }
 }

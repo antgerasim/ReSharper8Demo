@@ -4,14 +4,14 @@ namespace CSharp.InlineParameter
 {
   public class Employee
   {
-    public void DoSomething(string format)
+    public void DoSomething(Action action)
     {
-      ((Action) (() => Console.WriteLine(format)))();
+        action();
     } 
 
     public void Work(string work)
     {
-      DoSomething(work);
+      DoSomething(()=> Console.WriteLine(work));
     }
   }
 }
