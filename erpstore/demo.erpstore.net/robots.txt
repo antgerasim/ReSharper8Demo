@@ -1,0 +1,6 @@
+﻿User-agent: *
+Disallow: /aide
+Disallow: /condition-generales-vente
+Disallow: /information-legale
+Disallow: /contact
+Allow: /

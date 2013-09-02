@@ -1,0 +1,228 @@
+﻿Migration .Net 3.5 MVC2 -> .Net 4.0 MVC3
+
+
+French
+* Affichage du stock dispo dans un panier comparaison des codes produit case insensitive
+* Affichage des produits lies crash si le code produit indiqué n'existe pas
+* Ajout d'une action OrderList a destination des moteurs de recherche en Get (retourne une page vide pour eviter une erreur 500)
+* Ajout d'une actoin QuoteList a destination des moteurs de recherche en Get (retourne une page vide pour eviter une erreur 500)
+* Changement du Lifetimemanager pour la factory de controller, utilisation par defaut d'un new a la place d'un singleton (prevention de fuite mémoire)
+* Ajout d'une methode d'extension pour l'affichage d'un panier via son Id (partage immediat en cut/paste)
+* Correction d'un bug dans l'affichage du meta description que le terme contient un guillemet
+* Ajout de la raison de la taxe dans le cas des frais de port 
+* Traitement des produits fin de vie au niveau du service des paniers de commande (pas d'ajout si le stock demandé n'est pas suffisant)
+English
+* Show available stock in cart (product code compared with insensitive case)
+* Crash if product code does not exists with linked products
+* Add Get Action Show OrderList (empty page) for Search engine in Get (error 500)
+* Add Get Action Show QuoteList (empty page) for Search engine in Get (error 500)
+* Change Lifetimemanager for controller factory, use new instead singleton (prevent leak memory)
+* Add Extension Method for display cart with sharable link by default
+* Correction meta description with quote in text replace by double quote
+* Add reason for shipping tax
+* Process end of life product in Cart service (don't add if stock not available)
+
+
+
+Build 63163
+-----------
+
+French
+* Possibilité de changer l'adresse from pour l'envoi des emails
+* Fixed : Crash lors de la suppression d'un panier dont le code n'existe pas
+* Fixed : Dans le controller AnonymousCheckout l'adresse de facturation si elle etait selectionnée ne passait pas par un validateur
+* Amélioration du tracking sur les redirects
+* EventPublisher global déplacé dans le controller de base StoreController
+* Modification du model CartItemNeeded pour une meilleure utilisation avec jQuery
+* Ajout d'une action dans CatalogControlleur pour l'affichage des selections de produit
+* Optimisation de l'affichage des images avec un meilleur controle du cache
+* Meilleur tracking sur les redirection de requete
+* Ajout d'une propriété De source de creation d'un panier de type commande LeadSourceId utilisé pour le tracking
+English
+* Ability to change the address from for sending emails
+* Fixed : Crash during suppression of cart with missing code
+* Fixed : In the AnonymousCheckout controller, if billing address it was selected not passed by a validator
+* Best redirect tracking
+* EventPublisher global moved to StoreController base
+* Modification of CartItemNeeded Model for best use with jQuery
+* Action added to CatalogControlleur for show selections of products
+* Optimisation of pictures with best cache control
+* Best tracking on redirected request
+* LeadSourceId  property added to OrderCart Model used with tracking
+
+Build 61689 
+-----------
+French
+* Affichage des derniers produits ajoutés dans un panier
+* Suppression des types concernant la publicité Advertising*, deplacé dans le plugin Advertising sur erpstorecontrib
+* Log en Anglais (a la demande générale)
+* Ajout d'un methode dans AccountService pour recuperer une liste de client via un identifiant de selection
+English
+* Show last products of all cart for everyone
+* Suppression of Advertising types in models, moved on Advertising plugin in erpstorecontrib.codeplex.com
+* Log en English 
+* Add Method in AccountService for get a set of customer with a selection
+
+
+Build 61122 
+-----------
+* Fixed : Bug important de sécurité http://weblogs.asp.net/scottgu/archive/2010/09/18/important-asp-net-security-vulnerability.aspx
+  en environnement de prod (debug="false") le site ne demarrera pas si la section system.web/customErrors est mal configurée
+* Ajout de la propriété Product.Warranty 
+
+Build 61075 
+-----------
+* Ajout du repository vide par defaut pour la localization
+* Ajout de la possiblité jouer sur le cache des page en fonction de la personne connectée VaryByCustom
+
+Build 61046 
+-----------
+ATTENTION POUR LES PLUGINS ! 
+* Changement de la signature de l'interface IPluginLoaderService.Load(), HttpContextBase est passé en lieu et place de HttpContext (pour faciliter les tests)
+* Changement du constructeur PluginInit passage en paramètre de HttpContextBase en lieu et place de HttpContext
+
+* Changement de signature de la methode PaymentController.ProcessResponse, attention elle n'a plus la reponsabilité de l'envoi du mail de confirmation de commande
+
+Build 60883 
+-----------
+* Fixed : La mehtode LogoffHref() retournait sur une mauvaise page, nouvelle methode, avec passage de la page de retour possible
+* Suppression de la possibilité de vider le cache via un paramètre dans l'url utiliser le service wcf à la place
+* Ajout d'une authentification pour les methode d'admin service, il faut passer la clé du site dans le header de la requete WCF maintenant
+
+Build 60727 
+-----------
+* Refacto guidée par de nouveaux tests
+* Ajout de la source etant à l'origine d'un panier propriété CartBase.LeadSourceName 
+
+Build 60451 
+-----------
+* Amélioration de l'autentification (cookie) dans le controller Admin
+* Changement du model RegistrationUser modification de la propriété TvaNumber passe a VATNumber , elle est marquée comme obsolète false
+* Suppression du systeme de filtrage des urls non reconnues, utiliser l'urlrewriter de IIS à la place
+* Controller de paiement ajout de tests et logs supplémentaires
+* Changement de signature pour la methode CloseRegistrationUser
+
+
+Build 60346 
+-----------
+* Ajout d'un event lors de la creation d'un panier de type commande
+* Modification de la procedure de deconnexion, dans certain cas le cookie n'etait pas supprimé ce qui provoquait un delog impossible
+* Numéro de version fixé, pb de référence avec erpstorecontrib
+
+Build 60154 
+-----------
+* Fixed : Bug sur le lien mail d'une confirmation de commande mauvais non de vue
+
+Build 60147 
+-----------
+* Fixed : Bug sur le lien mail d'une confirmation de commande
+* Modification : Langue par defaut "fr" pour le service de traduction (plus d'utilisation de la langue du navigateur par defaut)
+
+Build 60146 
+-----------
+* Fixed : Crash si un client nouvellement inscrit via Registration passait une commande via AnonymousCheckoutController, l'adresse de livraison n'etait pas prise en compte
+
+Build 60090 
+-----------
+* Amélioration de la connexion lors du login
+
+Build 60079 
+-----------
+* Modification : Changement du traitement du domain du cookie, si le domaine n'est pas spécifié, pas de traitement spécial
+
+Build 60028 
+-----------
+﻿* Fixed : Dans l'eventpublisher si un evenement etait lancé et qu'il n'y avait aucun abonné alors crash
+* Amélioration : Action de supprimer une adresse de livraison , retour a une page définié, par defaut le referer
+* Fixed : Page de confirmation, le validator pour la case a cocher ne contenait pas le bon nom de controle
+* Fixed : Crash sur la methode WorkflowHelper.ExecuteManualWorkflow si aucun paramètre n'etait passé
+
+Build 59937 
+-----------
+
+* Amélioration de la methode d'extension pour l'insersion de route à un index precis
+﻿* Fixed : Si le paramètre SiteSettings.SignInWhenRegistered etait a true, la transaction echouait lors de l'enregistrement
+
+Build 59841 
+-----------
+* Fixed : l'event broker laissait passer les erreurs, maintenant il y a un rethrow
+
+Build 59761
+-----------
+
+* Amélioration de la methode d'extension pour l'insersion de route à un index precis
+* Differentes correction de bugs liés aux traductions
+
+Build 59761
+-----------
+
+* Affection de la culture en fonction du language déclaré dans le navigateur par défaut
+* Ajout de l'url mail direct pour la confirmation de commande
+* Deplacement de la generation de l'url de confirmation d'une inscription du controller vers le service d'envoi des emails
+* Nouvelle methode pour la déclaration des modes de payment il faut ajouter la déclaration de section suivante dans web.config
+<configuration>
+	<configSections>
+		<section name="erpStorePayments" type="ERPStore.Configuration.PaymentConfigurationSection, ERPStore.Core"/>
+	</configSections>
+	<erpStorePayments>
+		<payments>
+			<add name="Paypal"  />
+			<add name="Sogenactif" />
+			<add name="WireTransfer" />
+		</payments>
+	</erpStorePayments>
+</configuration>
+* Correction Bug : SimpleCacheService amélioroation threadsafe (pouvait avoir 2 entrées identiques dans certains cas spécifiques)
+* Suppression de l'enum PaymentMode
+* Changment sur la classe OrderCart, suppression de la propriété PaymentMode au profit de PaymentModeName (string)
+* Changement sur la classe Order , suppression de la propriété PaymentModeId
+* Changement sur la classe Quote, suppression de la propriété PaymentModeId
+* Changement sur la classe Invoice , suppression de la propriété PaymentModeId
+* Modification de l'interface des service de paiement IPaymentService ajout de propriétés
+
+
+Build 59666 & 59667 
+-------------------
+
+* Deplacemnet de la determination du language en cours pour l'utilisateur dans le service de localization
+* Changement de la signature du constructeur de base StoreController les services sont injecté par l'attribut dependency maintenant
+
+Build 59618
+-----------
+
+* Fermeture de l'inscription lors d'une commande avec inscription si celle-ci va jusqu'au bout de la procedure
+* Affectation du client nouvellement inscrit au panier lors d'une commande avec inscription
+* Creation d'un mot de passe automatique en envoi de celui-ci dans la première commande par mail
+* Ajout d'une route Emailer pour pouvoir creer un lien permanent vers un mail quand celui-ci ne peut pas etre lu au format HTML
+ou pour un webdesigner pouvoir travailler sur les textes.
+* Ajout de variable pour l'indication du repertoire pour les vues d'un certain nombre de controllers
+
+
+Build 59507
+-----------
+* Ajout d'un SalesService par defaut, pour les connecteur le mieux est d'heriter de cette classe pour 
+beneficier de code de validation
+* Ajout d'un controller qui permet de prendre une commande et d'inscrire le client simultanement
+* Creation d'un nouveau controller CheckoutController (prise de commande pour un client déjà inscrit) et deplacement de toutes les actions avant
+la création de la commande de OrderController vers ce nouveau controller.
+* Creation d'un nouveau controller RegistrationController (enregistrement d'un client), les actions presentes
+dans le controller Account ont été deplacées dans celui-ci
+* Nouvelle methode d'extension pour l'ajout d'un cookie securisé dans le cas ou un client veut 
+se connecter HttpResponseBase.AddAuthenticatedCookie()
+* Ajout d'un service d'enregistrement des routes Services.IRoutesRegistrationService, le but est pour un tiers
+de pouvoir overrider les routes pour y injecter ses propres controllers, par exemple pour l'inscription ou la commande
+
+Build 59150
+-----------
+Amélioration
+* Ajout d'un repository pour l'enregistrement d'un client
+ERPStore.Repository.IRegistrationRepository
+par defaut un repository (ERPStore.Repository.SessionRegistrationRepository) utilisant les sessions server est configuré
+* Modification des tests changement sur la création des Controllers
+
+Build 58732 V 1.9.0.2
+---------------------
+Correction Bug
+* La methode GetBreadCrumb() pour les catégories de produit etait buggée
+Amélioration
+* Ajout d'un methode Url.ShowProductStockInfoHref() permet de recuperer l'url pour l'affichage des infos de stock pour un produit
